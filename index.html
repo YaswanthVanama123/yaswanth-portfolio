@@ -11,18 +11,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="progress" id="progress"></div>
+
     <header class="nav">
       <a href="#top" class="brand">
         <span class="dot"></span>
         Yaswanth Gandhi
       </a>
-      <nav>
+      <nav id="nav-links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
@@ -33,24 +35,74 @@
 
     <main id="top">
       <section class="hero">
-        <p class="eyebrow">Full-Stack Developer</p>
-        <h1>
-          Hi, I'm Yaswanth Gandhi. <br />
-          <span class="accent">I build scalable web apps.</span>
-        </h1>
-        <p class="lede">
-          I'm a full-stack developer who enjoys turning ideas into clean,
-          reliable products — from designing the UI in React to shipping
-          the APIs and databases that power it. Currently at
-          <strong>Hogarth Worldwide</strong>, Hyderabad.
-        </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="#projects">View Work</a>
-          <a class="btn" href="#contact">Get in Touch</a>
+        <div class="hero-text">
+          <p class="eyebrow">Full-Stack Developer · Available for Work</p>
+          <h1>
+            Hi, I'm Yaswanth Gandhi. <br />
+            <span class="accent">I build scalable web apps.</span>
+          </h1>
+          <p class="lede">
+            Full-stack developer turning ideas into clean, reliable
+            products — from React interfaces to Node.js APIs and
+            PostgreSQL databases. Currently at
+            <strong>Hogarth Worldwide</strong>, Hyderabad.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#projects">View Work</a>
+            <a class="btn" href="#contact">Get in Touch</a>
+            <a class="btn" href="resume.pdf" download>Download Resume ↓</a>
+          </div>
+          <div class="tags">
+            <span>React</span>
+            <span>Next.js</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>React Native</span>
+            <span>AWS</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-hidden="true">
+          <div class="hero-card-header">
+            <span class="bubble red"></span>
+            <span class="bubble yellow"></span>
+            <span class="bubble green"></span>
+            <span class="hero-card-title">about.js</span>
+          </div>
+          <pre><code><span class="c-key">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">'Yaswanth Gandhi'</span>,
+  <span class="c-prop">role</span>: <span class="c-str">'Full-Stack Developer'</span>,
+  <span class="c-prop">stack</span>: [
+    <span class="c-str">'React'</span>, <span class="c-str">'Node.js'</span>,
+    <span class="c-str">'PostgreSQL'</span>, <span class="c-str">'AWS'</span>
+  ],
+  <span class="c-prop">currentFocus</span>: <span class="c-str">'shipping fast,'</span>
+    + <span class="c-str">' reliable products'</span>,
+  <span class="c-prop">openToWork</span>: <span class="c-bool">true</span>,
+};</code></pre>
+        </aside>
+      </section>
+
+      <section class="stats reveal">
+        <div>
+          <h3>3<span>+</span></h3>
+          <p>Years coding</p>
+        </div>
+        <div>
+          <h3>10<span>+</span></h3>
+          <p>Projects shipped</p>
+        </div>
+        <div>
+          <h3>15<span>+</span></h3>
+          <p>Technologies used</p>
+        </div>
+        <div>
+          <h3>8.31</h3>
+          <p>B.Tech CGPA</p>
         </div>
       </section>
 
-      <section id="about" class="section">
+      <section id="about" class="section reveal">
         <h2><span class="num">01.</span> About</h2>
         <div class="about-grid">
           <div>
@@ -65,9 +117,9 @@
             </p>
             <p>
               I graduated with a B.Tech in Computer Science from Sir C.R.
-              Reddy College of Engineering, and most recently shipped
-              full-stack features at Hogarth Worldwide. I'm currently
-              open to new opportunities.
+              Reddy College of Engineering, and I'm currently shipping
+              full-stack features at Hogarth Worldwide. I'm open to new
+              opportunities — full-time, contract, or freelance.
             </p>
           </div>
           <ul class="facts">
@@ -79,14 +131,56 @@
         </div>
       </section>
 
-      <section id="experience" class="section">
-        <h2><span class="num">02.</span> Experience</h2>
+      <section id="services" class="section reveal">
+        <h2><span class="num">02.</span> What I Do</h2>
+        <div class="services">
+          <article class="svc">
+            <div class="svc-icon">&#60;/&#62;</div>
+            <h3>Frontend Development</h3>
+            <p>
+              Responsive, accessible interfaces built with React, Next.js,
+              and Tailwind CSS. Focused on performance and a polished
+              user experience.
+            </p>
+          </article>
+          <article class="svc">
+            <div class="svc-icon">{ }</div>
+            <h3>Backend &amp; APIs</h3>
+            <p>
+              REST APIs and backend services with Node.js and Express,
+              backed by PostgreSQL or MongoDB. Clean schemas, sensible
+              auth, and dependable integrations.
+            </p>
+          </article>
+          <article class="svc">
+            <div class="svc-icon">&#9712;</div>
+            <h3>Mobile Apps</h3>
+            <p>
+              Cross-platform mobile experiences with React Native — from
+              field-team tools to consumer apps with real-time features.
+            </p>
+          </article>
+          <article class="svc">
+            <div class="svc-icon">&#9729;</div>
+            <h3>Cloud &amp; DevOps</h3>
+            <p>
+              Deployments on AWS, containerization with Docker, and
+              CI/CD pipelines that make shipping fast and boring — the
+              way it should be.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section reveal">
+        <h2><span class="num">03.</span> Experience</h2>
         <article class="exp">
           <header>
             <div>
               <h3>Full-Stack Developer · Hogarth Worldwide</h3>
               <p class="meta">Hyderabad · 05/2025 – Present</p>
             </div>
+            <span class="badge">Current</span>
           </header>
           <ul>
             <li>
@@ -117,8 +211,8 @@
         </article>
       </section>
 
-      <section id="projects" class="section">
-        <h2><span class="num">03.</span> Projects</h2>
+      <section id="projects" class="section reveal">
+        <h2><span class="num">04.</span> Projects</h2>
         <div class="projects">
           <article class="card">
             <header>
@@ -126,16 +220,14 @@
               <span class="tag">Full-Stack</span>
             </header>
             <p class="card-sub">
-              Enterprise Sales Workflow &amp; Pricing Automation
-              Platform · 02/2023
+              Enterprise Sales Workflow &amp; Pricing Automation · 02/2023
             </p>
             <p>
-              Built an enterprise sales automation platform that
-              streamlines proposal creation, service pricing, quotation
-              generation, and sales workflows. Implemented dynamic
-              pricing engines, business pricing rules, and profitability
-              calculations, plus automated PDF generation with LaTeX for
-              professional proposals and agreements.
+              Enterprise sales automation platform that streamlines
+              proposal creation, service pricing, quotation generation,
+              and sales workflows. Includes dynamic pricing engines,
+              business pricing rules, profitability calculations, and
+              automated PDF generation with LaTeX.
             </p>
             <ul class="stack">
               <li>React</li>
@@ -162,11 +254,10 @@
             </p>
             <p>
               Full-stack inventory platform for stock operations,
-              tracking, and business workflows. Built modules for stock
+              tracking, and business workflows. Modules for stock
               checkout, reconciliation, quantity discrepancy handling,
-              delivery tracking, and real-time updates. Added
-              Playwright-based automation for repetitive inventory
-              processes, data validation, and workflow testing.
+              delivery tracking, and real-time updates — with
+              Playwright-based automation for repetitive flows.
             </p>
             <ul class="stack">
               <li>React</li>
@@ -185,17 +276,17 @@
           <article class="card">
             <header>
               <h3>ClickSolver</h3>
-              <span class="tag">Full-Stack</span>
+              <span class="tag">Mobile-First</span>
             </header>
             <p class="card-sub">
               On-Demand Instant Services Platform
             </p>
             <p>
-              An on-demand services platform that connects customers
-              with nearby service providers for instant bookings.
-              Designed end-to-end flows for service discovery,
-              real-time booking, provider matching, and status tracking,
-              with a focus on a fast, reliable mobile-first experience.
+              On-demand services platform that connects customers with
+              nearby service providers for instant bookings. End-to-end
+              flows for service discovery, real-time booking, provider
+              matching, and status tracking, optimised for a mobile-first
+              experience.
             </p>
             <ul class="stack">
               <li>React</li>
@@ -216,14 +307,13 @@
               <span class="tag">Mobile</span>
             </header>
             <p class="card-sub">
-              React Native companion app for field sales &amp; inventory
+              React Native companion for field sales &amp; inventory
             </p>
             <p>
-              Mobile app companion to the Enviromaster sales and
-              inventory platform. Lets field teams capture sales
-              entries, manage stock checkouts, and sync inventory
-              updates on the go, with offline-friendly forms and a
-              clean, touch-first interface.
+              Mobile companion to the Enviromaster sales and inventory
+              platform. Lets field teams capture sales entries, manage
+              stock checkouts, and sync inventory updates on the go —
+              with offline-friendly forms and a touch-first interface.
             </p>
             <ul class="stack">
               <li>React Native</li>
@@ -239,8 +329,8 @@
         </div>
       </section>
 
-      <section id="skills" class="section">
-        <h2><span class="num">04.</span> Skills</h2>
+      <section id="skills" class="section reveal">
+        <h2><span class="num">05.</span> Skills</h2>
         <div class="skills">
           <div>
             <h4>Languages</h4>
@@ -281,8 +371,36 @@
         </div>
       </section>
 
-      <section id="education" class="section">
-        <h2><span class="num">05.</span> Education &amp; Certificates</h2>
+      <section id="now" class="section reveal">
+        <h2><span class="num">06.</span> /now</h2>
+        <div class="now">
+          <div class="now-card">
+            <h4>Working on</h4>
+            <p>
+              Shipping full-stack features at Hogarth Worldwide — scalable
+              web apps with React, Next.js, Node.js, and PostgreSQL.
+            </p>
+          </div>
+          <div class="now-card">
+            <h4>Learning</h4>
+            <p>
+              Deeper into TypeScript patterns, advanced PostgreSQL,
+              system design, and improving my React Native skills for
+              cross-platform mobile work.
+            </p>
+          </div>
+          <div class="now-card">
+            <h4>Open to</h4>
+            <p>
+              Full-time roles, freelance/contract projects, and
+              collaborations on full-stack or mobile products.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section reveal">
+        <h2><span class="num">07.</span> Education &amp; Certificates</h2>
         <div class="edu-grid">
           <div>
             <h4>Education</h4>
@@ -315,8 +433,8 @@
         </div>
       </section>
 
-      <section id="contact" class="section contact">
-        <h2><span class="num">06.</span> Get in Touch</h2>
+      <section id="contact" class="section contact reveal">
+        <h2><span class="num">08.</span> Get in Touch</h2>
         <p class="lede">
           I'm currently open to opportunities — full-time roles,
           freelance projects, or just a friendly chat about software.
@@ -344,6 +462,8 @@
       </section>
     </main>
 
+    <a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
     <footer class="footer">
       <p>
         © <span id="year"></span> Vanama Yaswanth Gandhi. Built with HTML
@@ -352,7 +472,50 @@
     </footer>
 
     <script>
+      // Year
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Scroll progress bar
+      const progress = document.getElementById("progress");
+      const toTop = document.getElementById("toTop");
+      window.addEventListener("scroll", () => {
+        const h = document.documentElement;
+        const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+        progress.style.width = scrolled + "%";
+        toTop.classList.toggle("show", h.scrollTop > 600);
+      });
+
+      // Reveal on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+      // Active nav link
+      const links = document.querySelectorAll("#nav-links a");
+      const sections = [...links].map((l) => document.querySelector(l.getAttribute("href")));
+      const navObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              const id = "#" + e.target.id;
+              links.forEach((l) =>
+                l.classList.toggle("active", l.getAttribute("href") === id)
+              );
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" }
+      );
+      sections.forEach((s) => s && navObserver.observe(s));
     </script>
   </body>
 </html>
